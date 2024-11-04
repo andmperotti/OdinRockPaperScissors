@@ -22,7 +22,7 @@ function playRound(computerChoice, humanChoice){
         || (computerChoice==='paper'&&humanChoice==='rock')
     ){
         computerScore++
-        console.log(`You lose ${computerChoice} beats ${humanChoice}`)
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
     }else if(computerChoice===humanChoice){
         console.log("Tie, play again!")
     }else{
@@ -31,4 +31,4 @@ function playRound(computerChoice, humanChoice){
     }
 
 }
-playRockPaperScissors(computerWeapon, humanWeapon)
+playRound(computerWeapon, humanWeapon)
