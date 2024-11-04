@@ -8,21 +8,22 @@ let computerWeapon = getComputerChoice()
 function getHumanChoice(){
     return prompt("What weapon would you like to use? ").toLowerCase()
 }
-let userWeapon = getHumanChoice()
+let humanWeapon = getHumanChoice()
 
 //Define variables that will hold the score of the humanPlayer and the computerPlayer, give them a starting value of zero
 let humanScore = 0;
 let computerScore = 0
-//Create a one round play through, using a function to decide who wins and incrementing the correct score variable
-function playRockPaperScissors(computerWeapon, humanWeapon){
+
+//Create a one round play through, using a function, to decide who wins and incrementing the correct score variable
+function playRound(computerChoice, humanChoice){
     if(
-        (computerWeapon==='rock'&&humanWeapon==='scissors')
-        || (computerWeapon==='scissors'&&humanWeapon==='paper')
-        || (computerWeapon==='paper'&&humanWeapon==='rock')
+        (computerChoice==='rock'&&humanChoice==='scissors')
+        || (computerChoice==='scissors'&&humanChoice==='paper')
+        || (computerChoice==='paper'&&humanChoice==='rock')
     ){
         computerScore++
         console.log('Computer wins')
-    }else if(computerWeapon===humanWeapon){
+    }else if(computerChoice===humanChoice){
         console.log("Tie, play again!")
     }else{
         humanScore++
