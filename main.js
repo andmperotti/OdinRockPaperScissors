@@ -1,7 +1,9 @@
-//Save the weapon choices to a variable, as lowercase strings
-let choices = ['scissors', 'rock', 'paper']
-//Select the computers weapon choice randomly, save as a variable 
-let computerWeapon = choices[Math.floor(Math.random()*3)]
+//Create a function that returns one of 3 choices, and save its return as a variable to symbolized the computers choice
+function getComputerChoice(){
+    return ['rock', 'paper', 'scissors'][Math.floor(Math.random()*3)]
+}
+let computerWeapon = getComputerChoice()
+
 //Save the user input as their weapon choice in a variable, convert input to lower case
 let humanWeapon = prompt("What weapon would you like to use? ").toLowerCase()
 //Define variables that will hold the score of the humanPlayer and the computerPlayer, give them a starting value of zero
