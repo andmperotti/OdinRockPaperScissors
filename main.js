@@ -4,8 +4,12 @@ function getComputerChoice(){
 }
 let computerWeapon = getComputerChoice()
 
-//Save the user input as their weapon choice in a variable, convert input to lower case
-let humanWeapon = prompt("What weapon would you like to use? ").toLowerCase()
+//Create a function asks the user what weapon they'd like to use in the game, and save the return to a variable
+function getHumanChoice(){
+    return prompt("What weapon would you like to use? ").toLowerCase()
+}
+let userWeapon = getHumanChoice()
+
 //Define variables that will hold the score of the humanPlayer and the computerPlayer, give them a starting value of zero
 let humanScore = 0;
 let computerScore = 0
